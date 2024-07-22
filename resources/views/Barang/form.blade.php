@@ -24,7 +24,7 @@
                     <input type="text" class="form-control" id="harga_barang" name="harga_barang" value="{{ isset($barang) ? $barang->harga_barang : '' }}">
                     </div>
                     <div class="form-group">
-                        <label for="id_kategori_barang">Kategori Barang</label>
+                        <label for="id_kategori_barang">id_kategori</label>
                         <select name="id_kategori_barang" id="id_kategori_barang" class="form-control">
                           <option value="" selected disabled hidden>-- Pilih --</option>
                           @foreach ($kategoribarang as $item)
@@ -33,7 +33,7 @@
                       </select>
                       </div>
                       <div class="form-group">
-                        <label for="id_stock">Jumlah Barang</label>
+                        <label for="id_stock">id_stock</label>
                         <select name="id_stock" id="id_stock" class="form-control">
                           <option value="" selected disabled hidden>-- Pilih --</option>
                           @foreach ($stock as $item)

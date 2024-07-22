@@ -20,10 +20,10 @@ class BarangController extends Controller
 
     public function downloadpdf()
     {
-        $Barang = Barang::all();
-        if ($Barang) {
-            view()->share('barang', $Barang);
-            $pdf = PDF::loadView('barang.cetak-barang');
+        $barang = Barang::all();
+        if ($barang) {
+            // view()->share('barang', $Barang);
+            $pdf = PDF::loadView('barang.cetak-barang', compact('barang'));
             return $pdf->download('laporan_barang.pdf');
         } else {
             // Handle jika $barang kosong atau null
